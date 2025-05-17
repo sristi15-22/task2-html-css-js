@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sristi's Book Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#" onclick="showSection('todo')">To-Do List</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Home Section -->
+      <section id="home" class="active-section">
+        <h1>Welcome to My Book Page</h1>
+        <p>I love reading and learning from books!</p>
+        <img src="https://i.pinimg.com/originals/06/a7/db/06a7db4db4ec8491ba1b1443d4f8c15a.png"
+       alt="Stack of Books" class="book-image">
+           <div class="button-group">
+          <button onclick="showMessage()">Click Me!</button>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about" class="slide-section hidden">
+        <h2>About Me</h2>
+        <p><strong>Name:</strong> Sristi Singh</p>
+        <p><strong>Branch:</strong> Electronics and Communication (ECE)</p>
+        <p><strong>Year:</strong> 3rd Year</p>
+        <p><strong>College:</strong> KIET Group of Institutions</p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="hidden">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required><br>
+          <input type="email" id="email" placeholder="Your Email" required><br>
+          <textarea id="message" placeholder="Your Message" required></textarea><br>
+          <button type="submit">Submit</button>
+        </form>
+        <p id="form-status" class="hidden"></p>
+      </section>
+
+      <!-- To-Do List Section -->
+      <section id="todo" class="hidden">
+        <h2>My To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a task">
+        <button onclick="addTask()">Add</button>
+        <h3>Tasks</h3>
+        <ul id="todo-list"></ul>
+        <h3>Completed Tasks</h3>
+        <ul id="completed-tasks"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
